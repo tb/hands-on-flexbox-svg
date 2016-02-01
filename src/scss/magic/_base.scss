@@ -1,0 +1,38 @@
+/* > Rest
+-------------------------------- */
+body {
+    background-color: $ms-blues;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* > Base
+-------------------------------- */
+button,
+input[type=button] {
+    font-size: 0.88em; // 14px
+    padding: 0.5em 1.46em;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 0.1em 0 #1B4672;
+    background-color: $mr-dark-blues;
+    color: $ms-white;
+}
+
+input[type=text],
+button,
+input[type=button] {
+    &:focus,
+    &:active {
+        outline: none;
+    }
+}

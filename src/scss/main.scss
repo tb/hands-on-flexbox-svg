@@ -1,0 +1,19 @@
+/* > Core
+-------------------------------- */
+@import 'magic/variables';
+@import 'magic/base';
+@import 'magic/layout';
+
+/* > Components
+-------------------------------- */
+@import 'magic/header';
+@import 'magic/content';
+@import 'magic/user';
+@import 'magic/feed';
+@import 'magic/footer';
+
+@import '_your-magic';
+
+/* > Mobile
+-------------------------------- */
+@import 'magic/mobile';

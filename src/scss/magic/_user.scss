@@ -1,0 +1,73 @@
+.user {
+    font-size: 1.13em; // 18px
+    flex: 0 1 300px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: flex-start;
+
+    background-color: $ms-white;
+    border-radius: 6px;
+    margin-bottom: 2em;
+
+    &__cover {
+        flex: 0 0 auto;
+        max-width: 100%;
+    }
+
+    &__info {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        flex: 0 0 70%;
+        padding-top: 0.28em;
+
+        &__name {
+            font-size: 1em;
+            font-weight: 700;
+        }
+
+        &__handle {
+            font-size: 0.67em;
+            font-weight: 300;
+        }
+    }
+
+    &__avatar {
+        flex: 0/*  */ 0 30%;
+        text-align: center;
+
+        img {
+            $user__avatar__dimension: 4.17em;
+            width: $user__avatar__dimension;
+            height: $user__avatar__dimension;
+            border-radius: $user__avatar__dimension;
+            border: solid $ms-white 0.22em;
+            margin-top: -$user__avatar__dimension/2;
+        }
+    }
+
+    .stats {
+        display: flex;
+        flex: 1 1 auto;
+        justify-content: space-between;
+        padding: 1em;
+        cursor: pointer;
+
+        &__item {
+            font-size: 1em; // 18px
+            font-weight: 700;
+
+            &__text {
+                font-size: 0.78em;
+                font-weight: 300;
+                text-transform: uppercase;
+            }
+
+            &:hover {
+                color: $mr-dark-blues;
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+.content {
+    flex: 0 1 auto;
+    display: flex;
+
+    width: 800px;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 1.88em 0;
+    flex-wrap: wrap;
+}

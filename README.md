@@ -8,23 +8,18 @@ This git repo containse all materials used on Hands on Flexbox & SVG workshop. W
 
 ## Required Preparation
 
-1. run $ npm install
+1. run `$ npm install`
 2. ensure your 8080 port is free to use
-3. run $ webpack-dev-server --progress --colors
-4. open http://localhost:8080/webpack-dev-server/bundle in your browser
+3. run `$ npm run dev-server`
+4. open [http://localhost:8080/webpack-dev-server/bundle](http://localhost:8080/webpack-dev-server/bundle) in your browser
 
 ## Slides
 Will be added later
 
-
-## Code
-
 ### Example Code
-
 Will be added later
 
 ### Workshop Code
-
 Will be added later
 
 ### App Server
@@ -32,6 +27,10 @@ Will be added later
 **[server](https://www.npmjs.com/package/serve-static)** needed for running the app will be installed via present package.json
 - run project with auto-reload via "$ webpack-dev-server"
 - otherwise build by "$ webpack" and run "$ node server.js"
+
+### Issues
+
+If you have issues with running the dev server, try to install `webpack-dev-server` as a global node packages (`npm install webpack-dev-server -g`).
 
 
 ## Authors and Contributors

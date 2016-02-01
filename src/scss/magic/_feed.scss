@@ -1,0 +1,96 @@
+.feed {
+    flex: 0 1 460px;
+    border-radius: 6px;
+    overflow: hidden;
+
+    &__issue {
+        background-color: $ms-white;
+        padding: 2.5em;
+        text-align: center;
+
+        &__title {
+            font-size: 1.13em; /* 18px */
+            font-weight: 300;
+            margin-bottom: 0.75em;
+        }
+
+        &__message {
+            font-size: 0.75em; /* 12px */
+        }
+    }
+}
+
+/* > Tweet-box
+-------------------------------- */
+.tweet-box {
+    font-size: 0.88em; // 14px
+    padding: 0.86em;
+    background-color: $mr-light-blues;
+    display: flex;
+
+    &__input {
+        flex: 1;
+        border-radius: 4px;
+        border: none;
+        padding: 0 1em;
+    }
+}
+
+/* > Tweet
+-------------------------------- */
+.tweet {
+    font-size: 0.88em; /* 14px */
+    background-color: $ms-white;
+    padding: 1.25em;
+    display: flex;
+
+    &:not(:last-child) {
+        border-bottom: solid 0.14em $mr-light-blues;
+    }
+
+    &__content-wrapper {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__info {
+        display: flex;
+
+        & > * {
+            margin-right: 0.4em;
+        }
+
+        &__user-name {
+            font-weight: 700;
+        }
+
+        &__user-handle,
+        &__time {
+            font-weight: 300;
+            font-size: 0.86em;
+        }
+
+        &__time {
+            color: #8899A6;
+        }
+    }
+
+    &__content {
+        margin-top: 0.5em;
+    }
+
+    &__actions {
+        display: flex;
+        color: #AAB8C2;
+        margin-top: 0.8em;
+
+        & > * {
+            margin-right: 3em;
+        }
+
+        & i {
+            font-size: 1em; /* @todo remove this once we migrate to SVG */
+        }
+    }
+}
