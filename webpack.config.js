@@ -1,6 +1,6 @@
 var SvgStore = require('webpack-svgstore-plugin'),
-//HtmlWebpackPlugin = require('html-webpack-plugin'),
-path = require('path');
+    autoprefixer = require('autoprefixer'),
+    path = require('path');
 
 
 module.exports = {
@@ -13,9 +13,14 @@ module.exports = {
   },
   module:{
     loaders:[
-      {test: /\.scss$/, loader:"style!css!sass!"}
+      {test: /\.scss$/, loader:"style!css?sourceMap!postcss!sass?outputStyle=expanded&sourceMap=true&sourceMapContents=true"},
+      {test: /\.jpe?g$|\.gif$|\.png$/i, loader: "file-loader"},
+      {test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&minetype=application/font-woff"},
+      {test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader"}
     ]
   },
+  devtool:"#inline-source-map",
+  postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ],
   plugins: [
 
     new SvgStore(path.join(__dirname, 'svg-source', '**/*.svg'), path.join('sprites'), {
