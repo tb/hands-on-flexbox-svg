@@ -93,4 +93,10 @@
             font-size: 1em; /* @todo remove this once we migrate to SVG */
         }
     }
+
+    &__icon {
+      width: 18px;
+      height: 18px;
+      fill:#AAB8C2;
+    }
 }

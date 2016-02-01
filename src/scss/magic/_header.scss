@@ -61,4 +61,10 @@
 .logo {
     font-size: 30px;
     color: $the-blue;
+
+    &__icon {
+      width: 26px;
+      height: 26px;
+      fill:$the-blue;      
+    }
 }
