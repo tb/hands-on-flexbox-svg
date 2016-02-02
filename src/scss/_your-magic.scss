@@ -1,6 +1,15 @@
+/* > Layout
+-------------------------------- */
+.layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* > Header
 -------------------------------- */
 .header {
+    align-self: stretch;
     &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -16,4 +25,39 @@
 .shortcuts {
     display: flex;
     align-items: center;
+}
+
+/* > Content
+-------------------------------- */
+.content {
+    width: 800px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.user {
+    flex: 0 0 300px;
+
+    .user__card {
+        display: flex;
+
+        .user__avatar {
+            flex: 1;
+        }
+
+        .user__info {
+            flex: 2;
+        }
+    }
+
+    .stats {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.feed {
+    flex: 0 0 460px;
 }
