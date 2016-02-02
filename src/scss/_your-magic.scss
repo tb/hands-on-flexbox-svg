@@ -60,4 +60,29 @@
 
 .feed {
     flex: 0 0 460px;
+
+    .tweet-box {
+        display: flex;
+
+        .tweet-box__input {
+            flex: 1;
+        }
+    }
+
+    .tweet {
+        display: flex;
+
+        .tweet__content-wrapper {
+            flex: 1;
+        }
+
+        .tweet__info {
+            display: flex;
+            align-items: center;
+        }
+
+        .tweet__actions {
+            display: flex;
+        }
+    }
 }
