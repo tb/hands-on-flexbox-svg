@@ -2,8 +2,6 @@
     .header__wrapper {
         width: auto;
         padding: 1em;
-        flex-direction: column;
-        align-items: center;
     }
 
     .content {
@@ -11,30 +9,20 @@
     }
 
     .user {
-        flex-grow: 1;
-        flex-basis: auto;
         border-radius: 0;
     }
 
     .feed {
-        flex-grow: 1;
-        flex-basis: auto;
         border-radius: 0;
     }
 
     .shortcuts {
-        align-self: stretch;
-        .profile {
-            display: none;
-        }
-
         button {
             width: 100%;
         }
     }
 
     .menu {
-        flex-direction: column;
         margin-bottom: 40px;
 
         &__item:not(:last-child) {
@@ -44,24 +32,10 @@
     }
 
     .logo {
-        order: -1;
         margin-bottom: 40px;
 
         & > i {
             font-size: 40px;
         }
-    }
-
-
-  .slime {
-      left: -25px;
-
-      &__item {
-        &:nth-child(1){
-          .active &{
-            left: -80px;
-          }
-        }
-      }
     }
 }

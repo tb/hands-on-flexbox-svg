@@ -1,11 +1,7 @@
 .header {
-    flex: 1 1 auto;
-    align-self: stretch;
     background-color: $ms-white;
 
     &__wrapper {
-        display: flex;
-        justify-content: space-between;
         padding: 10px 0;
         width: 800px;
         margin: auto;
@@ -16,10 +12,7 @@
 -------------------------------- */
 .menu {
     font-size: 0.88em; // 14px
-    display: flex;
-    flex-wrap: wrap;
     font-weight: 700;
-    align-items: center;
 
     &__item {
         color: $mr-green;
@@ -33,10 +26,7 @@
 
 /* >Shortcuts
 -------------------------------- */
-.shortcuts {
-    display: flex;
-    align-items: center;
-}
+.shortcuts {}
 
 .profile {
     width: 3.13em;
@@ -45,7 +35,7 @@
 
     img {
         border-radius: 4px;
-        width: 100%;
+        max-width: 100%;
     }
 
     &--tweet {
@@ -57,15 +47,8 @@
 
 /* > Logo
 -------------------------------- */
-/* @todo review once svg icons implemented */
 .logo {
-    font-size: 30px;
-    color: $the-blue;
-    align-self: center;
-
-    &__icon {
-      width: 26px;
-      height: 26px;
-      fill:$the-blue;      
-    }
+    height: 2em;
+    width: 2em;
+    fill: $the-blue;
 }

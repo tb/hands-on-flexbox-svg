@@ -1,26 +1,15 @@
 .user {
     font-size: 1.13em; // 18px
-    flex: 0 1 300px;
-
-    display: flex;
-    flex-wrap: wrap;
-
-    align-items: flex-start;
 
     background-color: $ms-white;
     border-radius: 6px;
     margin-bottom: 2em;
 
     &__cover {
-        flex: 0 0 auto;
         max-width: 100%;
     }
 
     &__info {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        flex: 0 0 70%;
         padding-top: 0.28em;
 
         &__name {
@@ -35,7 +24,6 @@
     }
 
     &__avatar {
-        flex: 0/*  */ 0 30%;
         text-align: center;
 
         img {
@@ -49,9 +37,6 @@
     }
 
     .stats {
-        display: flex;
-        flex: 1 1 auto;
-        justify-content: space-between;
         padding: 1em;
         cursor: pointer;
 

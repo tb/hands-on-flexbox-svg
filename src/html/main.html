@@ -1,44 +1,3 @@
-
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none">
-  <defs>
-    <filter id="svgFilter">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="goo"></feGaussianBlur>
-      <feColorMatrix in="goo" mode="matrix" result="goo"
-      values="1 0 0 0 0
-              0 1 0 0 0
-              0 0 1 0 0
-              0 0 0 25 -10" />
-
-     <feColorMatrix type="matrix" in="SourceGraphic" result="icons"
-      values="0  0  0  0  1
-              0  0  0  0  1
-              0  0  0  0  1
-              -1 -1 -1 1  0"/>
-      <feBlend in="icons" in2="goo"></feBlend>
-    </filter>
-  </defs>
-</svg>
-
-<script>
-
-document.addEventListener('DOMContentLoaded', function(){
-
-  var menu = document.getElementById('slimeMenu');
-
-  window.toggleMenu = function(e){
-    menu.classList.toggle('active');
-  }
-
-  window.closeMenu = function(name){
-    console.log(name);
-    menu.classList.remove('active');
-  }
-});
-
-</script>
-
-
-
 <div class="layout">
     <header class="header">
         <div class="header__wrapper">
@@ -54,37 +13,9 @@ document.addEventListener('DOMContentLoaded', function(){
                 </a>
             </div>
 
-            <div class="logo">
-
-               <!-- <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="logo__icon">
-                  <use xlink:href="#icon-twitter"></use>
-                </svg>-->
-
-
-               <div id="slimeMenu">
-                  <ul class="slime">
-                    <li class="slime__item" >
-                      <a href="#" onClick="closeMenu('droplet')">
-                        <svg class="slime__icon" >
-                          <use xlink:href="#icon-glass"></use>
-                        </svg>
-                      </a>
-                    </li>
-                    <li class="slime__item">
-                      <a href="#" onClick="closeMenu('home')">
-                        <svg class="slime__icon">
-                          <use xlink:href="#icon-bubble"></use>
-                        </svg>
-                      </a>
-                    </li>
-                    <li class="slime__item" onClick="toggleMenu(event)">
-                      <svg class="slime__icon">
-                        <use xlink:href="#icon-twitter"></use>
-                      </svg>
-                    </li>
-                  </ul>
-                </div>
-            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="logo">
+              <use xlink:href="#icon-twitter"></use>
+            </svg>
 
             <div class="shortcuts">
                 <a href="#" class="profile">
@@ -100,14 +31,17 @@ document.addEventListener('DOMContentLoaded', function(){
         <div class="user">
             <img src="assets/imgs/user-profile-cover.png" alt="User's profile cover" class="user__cover">
 
-            <div class="user__avatar">
-                <img src="assets/imgs/avatar.png" alt="">
+            <div class="user__card">
+                <div class="user__avatar">
+                    <img src="assets/imgs/avatar.png" alt="">
+                </div>
+
+                <div class="user__info">
+                    <div class="user__info__name">Rick Sanchez</div>
+                    <div class="user__info__handle">@ricky_invader</div>
+                </div>
             </div>
 
-            <div class="user__info">
-                <div class="user__info__name">Rick Sanchez</div>
-                <div class="user__info__handle">@ricky_invader</div>
-            </div>
 
             <div class="stats">
                 <div class="stats__item">
@@ -135,12 +69,12 @@ document.addEventListener('DOMContentLoaded', function(){
 
         <div class="feed">
             <div class="tweet-box">
-                <a href="#" class="profile"><img src="assets/imgs/avatar.png" alt=""></a>
+                <a href="#" class="profile"> <img src="assets/imgs/avatar.png" alt=""> </a>
                 <input type="text" class="tweet-box__input">
             </div>
 
             <div class="tweet">
-                <a href="#" class="profile profile--tweet"><img src="assets/imgs/avatar.png" alt=""></a>
+                <a href="#" class="profile profile--tweet"> <img src="assets/imgs/avatar.png" alt=""> </a>
 
                 <div class="tweet__content-wrapper">
                     <div class="tweet__info">
@@ -155,343 +89,33 @@ document.addEventListener('DOMContentLoaded', function(){
 
                     <div class="tweet__actions">
                         <div class="tweet__actions__reply">
-                            
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="tweet__icon">
-                              <use xlink:href="#icon-reply"></use>
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                <use xlink:href="#icon-reply"></use>
                             </svg>
                         </div>
 
                         <div class="tweet__actions__retweet">
-                            
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="tweet__icon">
-                              <use xlink:href="#icon-retweet"></use>
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                <use xlink:href="#icon-retweet"></use>
                             </svg>
                         </div>
 
                         <div class="tweet__actions__like">
-                            
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="tweet__icon">
-                              <use xlink:href="#icon-heart"></use>
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                <use xlink:href="#icon-heart"></use>
                             </svg>
                         </div>
 
-                        <div class="tweet__actions__like">
-
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="tweet__icon">
-                              <use xlink:href="#icon-dots"></use>
+                        <div class="tweet__actions__other">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                <use xlink:href="#icon-dots"></use>
                             </svg>
                         </div>
-
-                        <!-- @todo search for icon for this one -->
-                        <!-- <div class="tweet__actions__other">
-                            <i class="fa fa-heart"></i>
-                        </div> -->
                     </div>
                 </div>
             </div>
 
             <!-- START:BLOCK -->
-            <div class="tweet">
-                <a href="#" class="profile profile--tweet"><img src="assets/imgs/avatar.png" alt=""></a>
-
-                <div class="tweet__content-wrapper">
-                    <div class="tweet__info">
-                        <div class="tweet__info__user-name">Internet of shit</div>
-                        <div class="tweet__info__user-handle">@internetofshit</div>
-                        <div class="tweet__info__time">• 34 mins</div>
-                    </div>
-
-                    <div class="tweet__content">
-                        The Internet of Shitty Things is here. Have all of your best home appliances ruined by putting the internet in them!
-                    </div>
-
-                    <div class="tweet__actions">
-                        <div class="tweet__actions__reply">
-                            
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="tweet__icon">
-                              <use xlink:href="#icon-reply"></use>
-                            </svg>
-                        </div>
-
-                        <div class="tweet__actions__retweet">
-                            
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="tweet__icon">
-                              <use xlink:href="#icon-retweet"></use>
-                            </svg>
-                        </div>
-
-                        <div class="tweet__actions__like">
-                            
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="tweet__icon">
-                              <use xlink:href="#icon-heart"></use>
-                            </svg>
-                        </div>
-
-                        <!-- @todo search for icon for this one -->
-                        <!-- <div class="tweet__actions__other">
-                            <i class="fa fa-heart"></i>
-                        </div> -->
-                    </div>
-                </div>
-            </div>
-            <div class="tweet">
-                <a href="#" class="profile profile--tweet"><img src="assets/imgs/avatar.png" alt=""></a>
-
-                <div class="tweet__content-wrapper">
-                    <div class="tweet__info">
-                        <div class="tweet__info__user-name">Internet of shit</div>
-                        <div class="tweet__info__user-handle">@internetofshit</div>
-                        <div class="tweet__info__time">• 34 mins</div>
-                    </div>
-
-                    <div class="tweet__content">
-                        The Internet of Shitty Things is here. Have all of your best home appliances ruined by putting the internet in them!
-                    </div>
-
-                    <div class="tweet__actions">
-                        <div class="tweet__actions__reply">
-                            <!-- <i class="fa fa-mail-reply"></i> -->
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="tweet__icon">
-                              <use xlink:href="#icon-reply"></use>
-                            </svg>
-                        </div>
-
-                        <div class="tweet__actions__retweet">
-                            <!-- <i class="fa fa-retweet"></i> -->
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="tweet__icon">
-                              <use xlink:href="#icon-retweet"></use>
-                            </svg>
-                        </div>
-
-                        <div class="tweet__actions__like">
-                            <!-- <i class="fa fa-heart"></i> -->
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="tweet__icon">
-                              <use xlink:href="#icon-heart"></use>
-                            </svg>
-                        </div>
-
-                        <!-- @todo search for icon for this one -->
-                        <!-- <div class="tweet__actions__other">
-                            <i class="fa fa-heart"></i>
-                        </div> -->
-                    </div>
-                </div>
-            </div>
-            <div class="tweet">
-                <a href="#" class="profile profile--tweet"><img src="assets/imgs/avatar.png" alt=""></a>
-
-                <div class="tweet__content-wrapper">
-                    <div class="tweet__info">
-                        <div class="tweet__info__user-name">Internet of shit</div>
-                        <div class="tweet__info__user-handle">@internetofshit</div>
-                        <div class="tweet__info__time">• 34 mins</div>
-                    </div>
-
-                    <div class="tweet__content">
-                        The Internet of Shitty Things is here. Have all of your best home appliances ruined by putting the internet in them!
-                    </div>
-
-                    <div class="tweet__actions">
-                        <div class="tweet__actions__reply">
-                            <!-- <i class="fa fa-mail-reply"></i> -->
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="tweet__icon">
-                              <use xlink:href="#icon-reply"></use>
-                            </svg>
-                        </div>
-
-                        <div class="tweet__actions__retweet">
-                            <!-- <i class="fa fa-retweet"></i> -->
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="tweet__icon">
-                              <use xlink:href="#icon-retweet"></use>
-                            </svg>
-                        </div>
-
-                        <div class="tweet__actions__like">
-                            <!-- <i class="fa fa-heart"></i> -->
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="tweet__icon">
-                              <use xlink:href="#icon-heart"></use>
-                            </svg>
-                        </div>
-
-                        <!-- @todo search for icon for this one -->
-                        <!-- <div class="tweet__actions__other">
-                            <i class="fa fa-heart"></i>
-                        </div> -->
-                    </div>
-                </div>
-            </div>
-            <div class="tweet">
-                <a href="#" class="profile profile--tweet"><img src="assets/imgs/avatar.png" alt=""></a>
-
-                <div class="tweet__content-wrapper">
-                    <div class="tweet__info">
-                        <div class="tweet__info__user-name">Internet of shit</div>
-                        <div class="tweet__info__user-handle">@internetofshit</div>
-                        <div class="tweet__info__time">• 34 mins</div>
-                    </div>
-
-                    <div class="tweet__content">
-                        The Internet of Shitty Things is here. Have all of your best home appliances ruined by putting the internet in them!
-                    </div>
-
-                    <div class="tweet__actions">
-                        <div class="tweet__actions__reply">
-                            <!-- <i class="fa fa-mail-reply"></i> -->
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="tweet__icon">
-                              <use xlink:href="#icon-reply"></use>
-                            </svg>
-                        </div>
-
-                        <div class="tweet__actions__retweet">
-                            <!-- <i class="fa fa-retweet"></i> -->
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="tweet__icon">
-                              <use xlink:href="#icon-retweet"></use>
-                            </svg>
-                        </div>
-
-                        <div class="tweet__actions__like">
-                            <!-- <i class="fa fa-heart"></i> -->
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="tweet__icon">
-                              <use xlink:href="#icon-heart"></use>
-                            </svg>
-                        </div>
-
-                        <!-- @todo search for icon for this one -->
-                        <!-- <div class="tweet__actions__other">
-                            <i class="fa fa-heart"></i>
-                        </div> -->
-                    </div>
-                </div>
-            </div>
-            <div class="tweet">
-                <a href="#" class="profile profile--tweet"><img src="assets/imgs/avatar.png" alt=""></a>
-
-                <div class="tweet__content-wrapper">
-                    <div class="tweet__info">
-                        <div class="tweet__info__user-name">Internet of shit</div>
-                        <div class="tweet__info__user-handle">@internetofshit</div>
-                        <div class="tweet__info__time">• 34 mins</div>
-                    </div>
-
-                    <div class="tweet__content">
-                        The Internet of Shitty Things is here. Have all of your best home appliances ruined by putting the internet in them!
-                    </div>
-
-                    <div class="tweet__actions">
-                        <div class="tweet__actions__reply">
-                            <!-- <i class="fa fa-mail-reply"></i> -->
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="tweet__icon">
-                              <use xlink:href="#icon-reply"></use>
-                            </svg>
-                        </div>
-
-                        <div class="tweet__actions__retweet">
-                            <!-- <i class="fa fa-retweet"></i> -->
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="tweet__icon">
-                              <use xlink:href="#icon-retweet"></use>
-                            </svg>
-                        </div>
-
-                        <div class="tweet__actions__like">
-                            <!-- <i class="fa fa-heart"></i> -->
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="tweet__icon">
-                              <use xlink:href="#icon-heart"></use>
-                            </svg>
-                        </div>
-
-                        <!-- @todo search for icon for this one -->
-                        <!-- <div class="tweet__actions__other">
-                            <i class="fa fa-heart"></i>
-                        </div> -->
-                    </div>
-                </div>
-            </div>
-            <div class="tweet">
-                <a href="#" class="profile profile--tweet"><img src="assets/imgs/avatar.png" alt=""></a>
-
-                <div class="tweet__content-wrapper">
-                    <div class="tweet__info">
-                        <div class="tweet__info__user-name">Internet of shit</div>
-                        <div class="tweet__info__user-handle">@internetofshit</div>
-                        <div class="tweet__info__time">• 34 mins</div>
-                    </div>
-
-                    <div class="tweet__content">
-                        The Internet of Shitty Things is here. Have all of your best home appliances ruined by putting the internet in them!
-                    </div>
-
-                    <div class="tweet__actions">
-                        <div class="tweet__actions__reply">
-                            <!-- <i class="fa fa-mail-reply"></i> -->
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="tweet__icon">
-                              <use xlink:href="#icon-reply"></use>
-                            </svg>
-                        </div>
-
-                        <div class="tweet__actions__retweet">
-                            <!-- <i class="fa fa-retweet"></i> -->
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="tweet__icon">
-                              <use xlink:href="#icon-retweet"></use>
-                            </svg>
-                        </div>
-
-                        <div class="tweet__actions__like">
-                            <!-- <i class="fa fa-heart"></i> -->
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="tweet__icon">
-                              <use xlink:href="#icon-heart"></use>
-                            </svg>
-                        </div>
-
-                        <!-- @todo search for icon for this one -->
-                        <!-- <div class="tweet__actions__other">
-                            <i class="fa fa-heart"></i>
-                        </div> -->
-                    </div>
-                </div>
-            </div>
-            <div class="tweet">
-                <a href="#" class="profile profile--tweet"><img src="assets/imgs/avatar.png" alt=""></a>
-
-                <div class="tweet__content-wrapper">
-                    <div class="tweet__info">
-                        <div class="tweet__info__user-name">Internet of shit</div>
-                        <div class="tweet__info__user-handle">@internetofshit</div>
-                        <div class="tweet__info__time">• 34 mins</div>
-                    </div>
-
-                    <div class="tweet__content">
-                        The Internet of Shitty Things is here. Have all of your best home appliances ruined by putting the internet in them!
-                    </div>
-
-                    <div class="tweet__actions">
-                        <div class="tweet__actions__reply">
-                            <!-- <i class="fa fa-mail-reply"></i> -->
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="tweet__icon">
-                              <use xlink:href="#icon-reply"></use>
-                            </svg>
-                        </div>
-
-                        <div class="tweet__actions__retweet">
-                            <!-- <i class="fa fa-retweet"></i> -->
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="tweet__icon">
-                              <use xlink:href="#icon-retweet"></use>
-                            </svg>
-                        </div>
-
-                        <div class="tweet__actions__like">
-                            <!-- <i class="fa fa-heart"></i> -->
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="tweet__icon">
-                              <use xlink:href="#icon-heart"></use>
-                            </svg>
-                        </div>
-
-                        <!-- @todo search for icon for this one -->
-                        <!-- <div class="tweet__actions__other">
-                            <i class="fa fa-heart"></i>
-                        </div> -->
-                    </div>
-                </div>
-            </div>
             <!-- END:BLOCK -->
 
             <div class="feed__issue">
