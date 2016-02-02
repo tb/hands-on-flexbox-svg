@@ -14,8 +14,8 @@ Before proceeding please make sure that you have [Git](https://git-scm.com/book/
 2. `cd` into it.
 3. run `$ npm install`
 4. ensure your `8080` port is free to use
-5. run `$ npm run dev-server`
-6. open [http://localhost:8080/webpack-dev-server/bundle](http://localhost:8080/webpack-dev-server/bundle) in your browser
+5. run `$ npm start`
+6. open http://localhost:8080/webpack-dev-server in your browser
 
 ## Slides
 Will be soon available.
@@ -28,9 +28,9 @@ Will be soon available.
 
 ### App Server
 
-**[Server](https://www.npmjs.com/package/serve-static)** needed for running the app will be installed via present package.json
-- run project with auto-reload via `$ webpack-dev-server`
-- otherwise build by "$ webpack" and run `$ node server.js`
+**[Server](https://www.npmjs.com/package/node-static)** needed for running the app will be installed via present package.json
+- run project with auto-reload via `$ npm start`
+- otherwise build and run static server `$ npm run server:static`
 
 ### Issues
 

@@ -5,20 +5,20 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev-server": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors"
+    "start": "webpack-dev-server --content-base dist",
+    "server:static": "webpack && static dist"
   },
   "author": "Tomas Rezac",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^6.3.1",
-    "connect": "^3.4.0",
     "css-loader": "^0.23.1",
     "file-loader": "^0.8.5",
     "html-loader": "^0.4.0",
     "node-sass": "^3.4.2",
+    "node-static": "0.7.7",
     "postcss-loader": "^0.8.0",
     "sass-loader": "^3.1.2",
-    "serve-static": "^1.10.0",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.9",
