@@ -8,33 +8,36 @@ This git repo containse all materials used on Hands on Flexbox & SVG workshop. W
 
 ## Required Preparation
 
-1. run `$ npm install`
-2. ensure your 8080 port is free to use
-3. run `$ npm run dev-server`
-4. open [http://localhost:8080/webpack-dev-server/bundle](http://localhost:8080/webpack-dev-server/bundle) in your browser
+Before proceeding please make sure that you have [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Node](https://nodejs.org/en/download/) installed.
+
+1. clone the repo locally `git clone https://github.com/cngroupdk/hands-on-flexbox-svg.git`
+2. `cd` into it.
+3. run `$ npm install`
+4. ensure your `8080` port is free to use
+5. run `$ npm run dev-server`
+6. open [http://localhost:8080/webpack-dev-server/bundle](http://localhost:8080/webpack-dev-server/bundle) in your browser
 
 ## Slides
-Will be added later
+Will be soon available.
 
 ### Example Code
-Will be added later
+Will be soon available.
 
 ### Workshop Code
-Will be added later
+Will be soon available.
 
 ### App Server
 
-**[server](https://www.npmjs.com/package/serve-static)** needed for running the app will be installed via present package.json
-- run project with auto-reload via "$ webpack-dev-server"
-- otherwise build by "$ webpack" and run "$ node server.js"
+**[Server](https://www.npmjs.com/package/serve-static)** needed for running the app will be installed via present package.json
+- run project with auto-reload via `$ webpack-dev-server`
+- otherwise build by "$ webpack" and run `$ node server.js`
 
 ### Issues
 
-If you have issues with running the dev server, try to install `webpack-dev-server` as a global node packages (`npm install webpack-dev-server -g`).
+If you have issues with running the dev server, try to install `webpack-dev-server` as a global node package (`npm install webpack-dev-server -g`).
 
 ## Authors and Contributors
-[Tomáš Řezáč](https://github.com/Rezi),
-[Motaquillah Maddane](https://github.com/kronik3r), and CN Group ([@cngroupdk](https://github.com/cngroupdk)).
+[Tomáš Řezáč](https://github.com/Rezi), [Motaquillah Maddane](https://github.com/kronik3r) and CN Group ([@cngroupdk](https://github.com/cngroupdk)).
 
 ### Support or Contact
 Please [file an issue](https://github.com/cngroupdk/hands-on-flexbox-svg/issues) or contact us directly.
