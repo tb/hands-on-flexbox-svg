@@ -32,6 +32,7 @@ Will be added later
 
 If you have issues with running the dev server, try to install `webpack-dev-server` as a global node packages (`npm install webpack-dev-server -g`).
 If there is a problem with font-awesome package. There is a bug in wrong linking modules together. You will need node version 4.0.0 to get it running:
+
 1. install "npm install -g n"
 2. $ n 4.0.0
 3. $ n (here you chose version 4.0.0)
