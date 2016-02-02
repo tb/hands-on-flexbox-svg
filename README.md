@@ -15,7 +15,7 @@ Before proceeding please make sure that you have [Git](https://git-scm.com/book/
 3. run `$ npm install`
 4. ensure your `8080` port is free to use
 5. run `$ npm start`
-6. open http://localhost:8080/webpack-dev-server in your browser
+6. open [http://localhost:8080/webpack-dev-server/](http://localhost:8080/webpack-dev-server/) in your browser
 
 ## Slides
 Will be soon available.
