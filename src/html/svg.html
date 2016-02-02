@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none">
+  <defs>
+    <filter id="svgFilter">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="goo"></feGaussianBlur>
+      <feColorMatrix in="goo" mode="matrix" result="goo"
+      values="1 0 0 0 0
+              0 1 0 0 0
+              0 0 1 0 0
+              0 0 0 25 -10" />
+
+     <feColorMatrix type="matrix" in="SourceGraphic" result="icons"
+      values="0  0  0  0  1
+              0  0  0  0  1
+              0  0  0  0  1
+              -1 -1 -1 1  0"/>
+      <feBlend in="icons" in2="goo"></feBlend>
+    </filter>
+  </defs>
+</svg>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function(){
+    var menu = document.getElementById('slimeMenu');
+    window.toggleMenu = function(e){
+      menu.classList.toggle('active');
+    }
+    window.closeMenu = function(name){
+      console.log(name);
+      menu.classList.remove('active');
+    }
+  });
+</script>

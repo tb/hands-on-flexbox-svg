@@ -38,4 +38,16 @@
             font-size: 40px;
         }
     }
+
+    .slime {
+        left: -12px;
+        &__item {
+            &:nth-child(1){
+                .active &{
+                    left: -80px;
+                }
+            }
+        }
+    }
+
 }
