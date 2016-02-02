@@ -1,0 +1,19 @@
+/* > Header
+-------------------------------- */
+.header {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.shortcuts {
+    display: flex;
+    align-items: center;
+}
