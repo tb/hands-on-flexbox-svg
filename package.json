@@ -23,6 +23,6 @@
     "url-loader": "^0.5.7",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0",
-    "webpack-svgstore-plugin": "git://github.com/mrsum/webpack-svgstore-plugin.git#test/issue-51"
+    "webpack-svgstore-plugin": "2.1.3"
   }
 }
