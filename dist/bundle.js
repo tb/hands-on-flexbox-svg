@@ -32,7 +32,7 @@ function svgXHR(url, baseUrl) {
 
   _ajax.send();
 }
-document.addEventListener('DOMContentLoaded', svgXHR('/Users/tb/projects/hands-on-flexbox-svg/dist/icons/3326e34bbdcd07bc39016fc8d567e3a6.icons.svg'), false);
+document.addEventListener('DOMContentLoaded', svgXHR('/Users/tb/projects/hands-on-flexbox-svg/node_modules/dist/icons/3326e34bbdcd07bc39016fc8d567e3a6.icons.svg'), false);
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};

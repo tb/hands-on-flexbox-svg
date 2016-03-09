@@ -23,7 +23,7 @@ module.exports = {
   plugins: [
     new SvgStore(
       path.join(__dirname, 'src/icons/*.svg'),
-      path.join(__dirname, 'dist/icons'),
+      'dist/icons',
       {
         name: '[hash].icons.svg',
         chunk: 'app',
